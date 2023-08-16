@@ -1,0 +1,37 @@
+/*navbar*/
+.navbar{
+    width: 500px;
+}
+
+
+/* Home */
+#home{
+    height: 820px;
+}
+#home::before{
+    width: 200%;
+}
+
+.heading{
+    font-size: 1.7rem;
+}
+
+/* About */
+#pic img{
+    width: 300px;
+    height: 280px;
+}
+#intro h2{
+    font-size: 1.5rem;
+}
+#intro p{
+    font-size: 1.5rem;
+}
+
+/* portfolio */
+#portfolio{
+    background-color: black;
+    align-items: center;
+    width: 500px;
+    padding: 30px;
+}

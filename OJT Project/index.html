@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Online Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width:800px)" href="tablet.css">
+    <link rel="stylesheet" media="screen and (max-width:530px)" href="phone.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="main">
+            <h1 class="heading">HI I AM <br> DARWIN CODERA</h1>
+            <button class="btn">
+                Hire me
+            </button>
+        </div>
+        <div class="home-sci">
+            <a href="https://www.facebook.com/drwncdr" target="_blank"><i class='bx bxl-facebook'></i></a>
+            <a href="mailto:darwinduacodera21@gmail.com" target="_blank"><i class='bx bxl-gmail' ></i></a>
+            <a href="https://www.linkedin.com/in/darwin-codera-5a6a16266/" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h3 class="heading">ABOUT ME</h3>
+        <div id="pic">
+            <img src="image2.png" alt="">
+            <div id="intro">
+                <h2>Darwin Codera</h2>
+                <p>I'm a recent graduate who finds delight in the balance between digital adventures and cherished family moments. When free, I immerse myself in the world of video games, honing both my strategic thinking and quick reflexes. Simultaneously, I strengthen my familial bonds, understanding the value of shared laughter and stories.
+
+                    In the realm of knowledge, I revisit programming concepts, maintaining a dynamic connection with the ever-evolving tech landscape. This passion fuels my dedication to growth in all aspects of life, driving me to continually enhance my skills and contributions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h1 class="heading">PORTFOLIO</h1>
+        <div class="gallery">
+            <img src="Project1.PNG" alt="">
+            <img src="Project3.PNG" alt="">
+            <img src="Project5.1.PNG" alt="">
+        </div>
+    </section>
+
+    <section id="services">
+        <h1 class="heading">SERVICES</h1>
+        <div class="row">
+           
+            <div class="box">
+                <img src="Ui.png" alt="">
+                <h1 class="heading">UI/UX <br> Design </h1>
+                <p>Creative web design and app <br> interface using Html and Css</p>
+            </div>
+           
+            <div class="box">
+                <img src="WebApp.png" alt="">
+                <h1 class="heading">Web Development</h1>
+                <p>Web app Development using C#, Html and Css</p>
+            </div>
+
+            <div class="box">
+                <img src="unity.png" alt="">
+                <h1 class="heading">Game Development</h1>
+                <p>Creating game using C# and Unity</p>
+            </div>
+        </div>
+    
+    </section>
+
+    <section id="contact">
+        <h1 class="heading">CONTACT</h1>
+        <form action="" class="form" onsubmit="sendEmail(); reset(); return true;">
+            <input type="text" name="name" class="input" placeholder="Enter Your Name" required>
+            <input type="email" name="email" class="input" placeholder="Enter You Email" required>
+            <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
+            <input type="submit" value="SEND" id="send">
+        </form>
+    </section>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+                Email.send({
+                    Host : "smtp.gmail.com",
+                    Username : "darwinduacodera21@gmail.com",
+                    Password : "Coderadarwin@21",
+                    To : 'deecodera@gmail.com',
+                    From : document.getElementsByClassName("input").value,
+                    Subject : "This is the subject",
+                    Body : "And this is the body"
+                }).then(
+                message => alert(message)
+            );
+        }
+    </script>
+</body>
+</html>
